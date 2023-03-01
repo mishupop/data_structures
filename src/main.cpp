@@ -30,7 +30,7 @@ int find_max_elem(int my_array[],int arr_size)
 {
 std::sort(my_array,my_array+arr_size);//sau sort(my_array,my_array+arr_size,std::greater<int>());
 return my_array[arr_size-1];
-//sau:return my_array[0];-[] random acces specifier- se acceseaza direct si nu trebuie iterat
+//...sau:return my_array[0];-[]=random acces specifier- se acceseaza direct si nu trebuie iterat
 }
 
 int find_max(int my_array[],int arr_size)
@@ -56,8 +56,10 @@ int main()
     // else
     // std::cout<<"n-am gasit\n";
 
-    // std::cout<<find_max_elem(test,8)<<"-cu sort"<<std::endl;//-O(n log n) +O(1)-worse case
+    // std::cout<<find_max_elem(test,8)<<"-cu sort"<<std::endl;//-O(n log n) +O(1)-worst case
     // std::cout<<find_max(test,8)<<"-fara sort"<<std::endl;// - O(n)
+    // la n=8, nlog(n)=7.2247, la n=100 nlog(n)=200 - la arrayuri mici O() cu sort poate fi 
+    // foarte aproape de varianta cu loop.
     Stiva s;
 
 for(int i=0;i<7;i++)
