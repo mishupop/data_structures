@@ -59,7 +59,7 @@ bool Stiva::isEmpty()
 
 bool Stiva::contains(int x)
 {
-    for (auto each : a)
+    for (auto &each : a)
     {
         if (each == x) 
         {
